@@ -130,7 +130,7 @@ def unpack(path, statusBar=None):
                 with open(file_path, 'wb') as dat:
                     dat.write(data)
                 if ext in ['ktx', 'pvr']:
-                    os.system('bin\\PVRTexToolCLI.exe -i {} -d -f r8g8b8a8'.format(file_path))
+                    os.system('bin\\PVRTexToolCLI.exe -i {} -d -ics sRGB -f r8g8b8a8'.format(file_path))
         os.system('del {}\\*.ktx'.format(folder_path))
         os.system('del {}\\*.pvr'.format(folder_path))
         if statusBar != None:
